@@ -10,13 +10,14 @@ body {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr auto;
-  font-family: "Poppins", sans-serif;
-  /* background-color: #202011; */
+  font-family: 'Lato', sans-serif;
+  background-color: #222222;
+  color: #f3f3f3;
 }
 
 .header {
-  /* background-color: #191919; */
-  background-color: rgba(0, 0, 0, .2);
+  background-color: #191919;
+  /* background-color: rgba(0, 0, 0, .2); */
   padding: 0 1rem;
   display: flex;
   justify-content: space-between;
@@ -32,7 +33,6 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 0 auto 0;
 }
 
 /*========================== CAROUSEL =====================*/
@@ -56,11 +56,27 @@ body {
 .carousel-caption h5{
   font-size: 3rem;
   font-weight: bold;
+  position:absolute;
+  top:-47vh;
+  left:0;
+  right: 0;
 }
 .carousel-caption p{
   font-size: 1.3rem;
+  position:absolute;
+  top:-30vh;
+  left:0;
+  right:0;
 }
-
+/*MEDIA QUERIE H5 Y P CAROULSEL A 631PX*/
+@media  (max-width:631px) {
+  .carousel-caption p{
+    top:-22vh;
+  }
+  .carousel-caption h5{
+    bottom:50%;
+  }
+}
 .carousel-img{
   width: 100%;
   height: 100%;
@@ -83,8 +99,9 @@ body {
 .nav-menu-item {
   display: inline-block;
   margin: 8px 12px;
-  font-size: 1.2rem;
-  text-transform: uppercase;
+  font-size: 1.3rem;
+  text-transform: capitalize;
+  font-weight: 100;
 }
 .nav-menu-link {
   text-decoration: none;
@@ -112,7 +129,6 @@ body {
 
 /*================== INICIO SECCION DE ESTILOS FOOTER =================*/
 .footer {
-  height: fit-content;
   background-color: #191919;
 }
 
@@ -124,7 +140,7 @@ body {
 
 .footer-copyright {
   color: #fff;
-  font-size: 0.8rem;
+  font-size: 0.7rem;
   text-align: center;
   padding: 15px 0;
 }
@@ -163,7 +179,7 @@ body {
 
 .about-me {
   width: 45%;
-  padding: 2rem 0 0 0;
+  padding: 1rem 0 0 0;
 }
 .about-me-title {
   font-size: 3.5vw;
@@ -172,9 +188,9 @@ body {
   text-align: center;
 }
 .about-me-text {
-  color: #191919;
+  color: #fff;
   font-size: 1.2vw;
-  line-height: 1.8;
+  line-height: 2;
   text-align: justify;
   padding:  0 2rem;
 }
@@ -184,7 +200,7 @@ body {
 }
 .img-sobremi {
   width: 100%;
-  border-radius: 8px;
+  border-radius: 4px;
   object-fit: cover;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
   transition: all 1s;
@@ -199,7 +215,7 @@ body {
 .grid-galeria {
   padding-top: 100px;
   display: grid;
-  gap: 4px;
+  gap:8px;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: 150px 250px 300px 200px;
 }
@@ -287,14 +303,14 @@ ul {
 .logo {
   text-align: center;
   font-size: 3em;
-  color: #b70e21;
-  margin-bottom: 1rem;
-  font-weight: 600;
+  color: #fff;
+  margin: 2rem 0;
+  font-weight: 300;
 }
 
-.contact-wrapper {
+ .contact-wrapper {
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-}
+} 
 
 .contact-wrapper > * {
   padding: 1em;
@@ -389,8 +405,15 @@ ul {
 
  @media (max-width:600px){
   .contenedor__contacto{
-    padding: 1rem;
+    padding:5rem 0;
   }
+  .logo{
+    font-size: 3rem;
+    margin-bottom: 2rem;
+  }
+   .content{
+    padding: 0;
+  } 
 }
 /*==================== FIN SECCION CONTACTO =======================*/
 
@@ -400,9 +423,9 @@ ul {
   .container {
     flex-direction: column;
   }
-  /*------SECCION ACERCA--------*/
+  /*------ SECCION ACERCA --------*/
   .about-me {
-    /*  padding-top: 155px; */
+    padding-top: 100px;
     width: 90%;
   }
   .about-me-title {
@@ -419,21 +442,18 @@ ul {
   .container-image{
     display: none;
   }
-  /*-----SECCION PORTFOLIO------*/
+  /*----- SECCION PORTFOLIO ------*/
   .grid-galeria {
     display: flex;
     flex-direction: column;
   }
-  /*----FOOTER----*/
+  /*---- FOOTER ----*/
   .footer-copyright,
   hr {
     display: none;
   }
   .footer {
     height: auto;
-  }
-  .nav {
-    display: none;
   }
 }
 
